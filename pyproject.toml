@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mats-frame-stage-binding"
+version = "0.2.0"
+requires-python = ">=3.11"
+dependencies = [
+  "datasets>=3.2",
+  "huggingface-hub>=0.27",
+]
+
+[project.optional-dependencies]
+gpu = [
+  "accelerate>=1.2",
+  "safetensors>=0.4",
+  "torch>=2.5",
+  "tqdm>=4.67",
+  "transformers>=4.48",
+]
+
+[project.scripts]
+frame-stage-time = "frame_stage_binding.time_ledger:main"
+frame-stage-repair-run = "frame_stage_binding.repair_run:main"
+frame-stage-repair-analyze = "frame_stage_binding.repair_analyze:main"
+frame-stage-repair-lock = "frame_stage_binding.repair_lock:main"
+frame-stage-repair-review = "frame_stage_binding.repair_review:main"
+frame-stage-repair-mirror = "scripts.mirror_repair_artifacts:main"
+frame-stage-repair-render-report = "frame_stage_binding.repair_report:main"
+
+[tool.setuptools.packages.find]
+include = ["frame_stage_binding*"]

@@ -1,0 +1,13 @@
+.external
+/secrets/
+.opencode-memory/
+.ruff_cache/
+.serena/
+workspace/
+receipts/
+CLAUDE.md
+.venv/
+*.egg-info/
+__pycache__/
+*.pyc
+.pytest_cache/

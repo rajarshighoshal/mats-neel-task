@@ -1,0 +1,6 @@
+.external IS A SYMLINK to /Volumes/T7/mats-weekend/frame-stage-binding (the T7 external SSD).
+
+- All experiment data lives on T7 ONLY. Nothing is duplicated on the Mac SSD.
+- NEVER run rm -rf on .external or anything under it. To delete data, target
+  /Volumes/T7/... explicitly and deliberately.
+- If T7 is not mounted, .external is a dangling link — mount the drive first.
