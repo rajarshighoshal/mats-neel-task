@@ -45,6 +45,8 @@ Start your response with 1 or 2, then continue in that mode.
 CHOICE:
 ```
 
+![Paired source-swap experiment](docs/figures/experiment-design.svg)
+
 The measured quantity is the next-token mode choice
 S = reason_logit − direct_logit at the scored position. With ψ(stage) =
 mean[S(notes_cue) − S(request_cue)] across items and both block orders,
